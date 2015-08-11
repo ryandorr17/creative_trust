@@ -19,6 +19,7 @@ class UsersController < ApplicationController
 
     if user
       session[:user_id] = user.id
+      session[:auth_token] = user.auth_token # Assuming correct Attribute
       current_user
       redirect_to videos_path
     else
