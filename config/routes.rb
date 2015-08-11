@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   get 'videos'   =>   'videos#index'
   get 'sign_in'  =>   'users#sign_in'
+  post 'create_session'  =>   'users#create_session'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
