@@ -4,12 +4,6 @@ class UsersController < ApplicationController
   end
 
   def create_session
-
-    # i'm unable to access the api documenation at this time, I'm assuming the login
-    # method accepts a hash and
-    #####
-    ##  Big Assumption: returns nil if not valid
-    ####
     begin
       user = User.login(user_params)
     rescue ActiveRestClient::HTTPNotFoundClientException
